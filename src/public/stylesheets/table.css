@@ -1,0 +1,33 @@
+table{
+    border:1px solid #aaa;
+    width: 100%;
+}
+
+table thead tr th{
+    border: 1px solid #000;
+    background: #202020;
+    color:#fff;
+    padding:5px;
+}
+
+table tbody tr td{
+    border:1px solid #bbb;
+    padding:8px;
+}
+
+#editsrc{
+    text-decoration: none;
+}
+
+.actionColumn{
+    display:flex;
+    grid-gap:.3em;
+    width:max-content;
+    /* border:1px solid; */
+}
+
+
+#editbtn, #delbtn{
+    padding:6px;
+    font-size:15px;
+}

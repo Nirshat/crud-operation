@@ -1,0 +1,42 @@
+*{
+    font-size: medium;
+}
+
+.headerow{
+    text-align:end;
+    padding:10px;
+    background:#ddd;
+}
+
+#cancel{
+    padding:8px;
+}
+
+form{
+    border:1px solid gray;
+    padding:10px;
+    width:40%;
+    margin: auto;
+}
+
+/* label{
+    border:1px solid gray;
+    width:100%;
+} */
+
+form  div {
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    /* border: 1px solid gray; */
+}
+
+form div input, form div select{
+    padding:8px;
+}
+
+form > div > button{
+    width:auto;
+    padding:8px;
+    align-self: flex-end;
+}
