@@ -1,10 +1,10 @@
 const mysql = require('mysql');
 
 const db = mysql.createConnection({
-    host:'localhost',
-    database:'crud_node',
-    user:'iamthedev',
-    password:'orenodatabase69'
+    host:'', // localhost for scratch
+    database:'', // database name
+    user:'', // username in xampp phyMyAdmin or any database application
+    password:'' // password in xampp phpMyAdmin or any database application
 });
 
 
