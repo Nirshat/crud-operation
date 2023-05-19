@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSERT DATA</title>
+
+    <link rel="stylesheet" href="/stylesheets/form.css">
+</head>
+<body>
+ 
+    <div class="headerow">
+        <a href="/retrieve"><button id="cancel">Cancel</button></a>
+    </div>
+    <br>
+
+    <form action="/create/create-script" method="post">
+        <div>
+            <label for="firstname">First Name:</label>
+            <input type="text" id="fname" name="fname">
+        </div>
+
+
+        <div>
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lname" name="lname">
+        </div>
+
+
+        <div>
+            <label for="edad">Age:</label>
+            <input type="text" id="edad" name="age">
+        </div>
+
+
+        <div>
+            <label for="sex">Gender:</label>
+            <select name="gend" id="sex">
+                <option value="" disabled selected hidden></option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+
+        <hr>
+        <div>
+            <div></div>
+            <button name="insert">Insert</button>
+        </div>
+    </form>
+
+</body>
+</html>

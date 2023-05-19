@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FETCH DATA</title>
+    
+    <link rel="stylesheet" href="/stylesheets/table.css">
+</head>
+<body>
+    
+
+    <div style="text-align:end; padding:10px; background:#ddd;">
+        <a href="/create">
+            <button style="padding:10px; font-size:medium;">Add User</button>
+        </a>
+    </div>
+    <br>
+
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>Gender</th> 
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <%
+        if (retrieve.length > 0) <!-- number of rows in database table-->
+        {
+            retrieve.forEach(function(data){ <!-- row key -->
+        %>
+            <tbody>
+                <tr>
+                    <td><%= data.fname %></td> 
+                    <td><%= data.lname %></td>
+                    <td><%= data.age %></td>
+                    <td><%= data.gender %></td>
+                    <td>
+                        <div class="actionColumn">
+                            <!-- Update -->
+                            <a href="/update/<%= data.id %>" id="editsrc">
+                                <button id="editbtn" type="button">Edit</button>
+                            </a>
+                            <!-- Update -->
+
+                            <!-- Delete -->
+                            <form action="/delete/<%= data.id %>" method="post">
+                                <button name="del" id="delbtn">Delete</button>
+                            </form>
+                            <!-- Delete -->
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        <%
+            });
+        }
+        else
+        {
+        %>
+        <tbody>
+            <tr>
+                <td colspan="3">No Data found...</td>
+            </tr>
+        </tbody>
+        <% } %>
+    </table>
+
+
+
+</body>
+</html>
